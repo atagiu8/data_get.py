@@ -1,0 +1,56 @@
+ジャイロセンサーの値からE
+102
+if <dre < 30 and Flag == False and Flag_1 == False:
+while not (button.enter):
+が1周したかを判断」
+ev3_motor_steer(0,0)
+if Feed is None:
+EN DIE
+Feed = s.recv(1024).decode()
+Feed_float = float(Feed)
+print(Feed_float)
+Set_Turn = Set_Turn - Feed_float
+Flag = True
+修正値を反映
+if button.backspace:
+s.close
+print('End program')
+sys.exit()
+print('Set Turn='+str(Set_Turn))
+Lap += 1
+Feed = None
+elif 40 <dre < 340 and Flag == True:
+Flag = False
+#sensors&motors initialize
+button = ev3.Button()
+color = ev3.ColorSensor('in3')
+gyro = ev3.GyroSensor('in2')
+1m_b = ev3. LargeMotor('outB')
+1m_c = ev3.LargeMotor('outc')
+#variable initializa
+Data_cycle = 1 #counter
+Flag = False #Flag
+Flag 1 = True #Flag
+Feed = None #Feedback turn
+Lap = 0
+#motor initialize
+1m_b.reset()
+im_c.reset()
+Set Power = 200
+Set_Turn = 70
+#dataget Main program
+with socket.socket (socket.AF_INET, socket. SOCK STREAM) as s:
+s.connect(('169.254.XXX.XXX',XXXXX)) #your PC's Bluetooth IP & PORT
+while not (button.backspace):
+EV3と通信するPCのIPア
+linetrace_steer(Set_Power, Set_Turn)
+スとポート番号を指定
+if Data_cycle % 5 == 0:
+dataget()
+ライントレース関数の呼び
+データ送受信を行う関数の呼
+lm_b.stop(stop_action = 'brake')
+Im_c.stop(stop_action = 'brake')
+s.close()
+print('End program)
+sys.exit()

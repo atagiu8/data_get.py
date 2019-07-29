@@ -1,0 +1,42 @@
+import ev3dev.ev3 as ev3
+import time
+import socket
+import sys
+7.2 CVETKE
+def linetrace_steer (power, turn_ratio):
+global Data_cycle
+if color.reflected light intensity > 30:
+ev3_motor_steer (power, turn_ratio*-1)
+else:
+ev3_motor_steer(power, turn_ratio)
+time.sleep(0.1)
+Data_cycle += 1
+def ev3_motor steer (power, turn_ratio):
+#power range: -1050 -> 1050. turn ratio range: -100 -> 100
+power ranturn_ratiorun_fore
+lm_b.run_forever(speed_sp = power * (1 + turn_ratio / 50))
+Im_c.run_forever(speed_sp = power)
+elif turn ratio > 0:
+lm_b.run_forever(speed_sp = power)
+1m_c.run forever(speedsp = power * (1 - turn_ratio / 50))
+else:
+1m_b.run_forever(speed_sp = power)
+1m_c.run_forever(speed_sp = power)
+データ送受信を行う関数]
+def dataget():
+global Flag
+global Flag_1
+global Feed
+global Set_Turn
+global Lap
+d1 = gyro.angle #sensor data
+if Lap > 0: #gyro adjust
+d1 = d1 - 2.3 * Lap
+dre = d1 % 360 #data remainder
+d1_str = str(dl)
+s.send(d1_str.encode()) {
+print(d1_str)
+if d1 >= 360:
+Flag_1 = False
+ジャイロセンサーの値
+をPCに送信
